@@ -1,24 +1,265 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lifecounter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2x-dJ-vMn">
+                                <rect key="frame" x="56" y="141" width="94" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="94" id="7Vk-dj-fcG"/>
+                                    <constraint firstAttribute="height" constant="49" id="Ml5-a1-w4w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0k-S3-Q51">
+                                <rect key="frame" x="56" y="198" width="94" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="dWE-0X-ooH"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="94" id="mqU-N6-gUm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8e-Wr-JEp">
+                                <rect key="frame" x="244" y="198" width="94" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="94" id="7U5-i9-W0E"/>
+                                    <constraint firstAttribute="height" constant="49" id="uaL-h7-fw9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSX-rG-9H9">
+                                <rect key="frame" x="244" y="141" width="94" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Fb1-qA-Ib2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="94" id="hPn-iy-wl5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX8-B2-yls">
+                                <rect key="frame" x="56" y="255" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9GR-TC-N2I"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="VR0-f2-zeD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="player1AddOne:" destination="BYZ-38-t0r" eventType="touchDown" id="DH4-gr-JEN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSl-Fi-hdj">
+                                <rect key="frame" x="105" y="255" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="33n-yU-Zls"/>
+                                    <constraint firstAttribute="height" constant="40" id="6cn-fi-2by"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+5">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="player1AddFive:" destination="BYZ-38-t0r" eventType="touchDown" id="1Fe-o3-0SX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7n-C0-E4g">
+                                <rect key="frame" x="56" y="310" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tcG-lH-mSj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="yAi-xh-Dl2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="player1RemoveOne:" destination="BYZ-38-t0r" eventType="touchDown" id="wOw-1E-od9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9se-zM-jgd">
+                                <rect key="frame" x="105" y="310" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Cc6-oo-w6u"/>
+                                    <constraint firstAttribute="height" constant="40" id="lcz-vq-Lmo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-5">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="player1RemoveFive:" destination="BYZ-38-t0r" eventType="touchDown" id="PLa-XD-Rfc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrM-V1-uYI">
+                                <rect key="frame" x="242" y="255" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="5yd-Wi-I8L"/>
+                                    <constraint firstAttribute="height" constant="40" id="Bvc-Dr-3iR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="player2AddOne:" destination="BYZ-38-t0r" eventType="touchDown" id="EPe-MG-IK6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOT-hc-bP9">
+                                <rect key="frame" x="291" y="255" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ox1-Fu-Nsa"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="dLo-jS-gEr"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+5">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="player2AddFive:" destination="BYZ-38-t0r" eventType="touchDown" id="861-gQ-Sd5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life Counter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkx-wu-ajI">
+                                <rect key="frame" x="125" y="84" width="143" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="2XN-1V-yKX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="DsH-NC-4dR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player X LOSES!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkC-Yy-MiD">
+                                <rect key="frame" x="112" y="520" width="169" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="hwM-jY-TFj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="169" id="nKV-zk-50o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJm-Ft-LYd">
+                                <rect key="frame" x="291" y="310" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CNB-nw-WP0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Hc9-fa-tmn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-5">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="player2RemoveFive:" destination="BYZ-38-t0r" eventType="touchDown" id="Ek2-ms-FXC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeE-VD-5TO">
+                                <rect key="frame" x="242" y="310" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="TVG-nE-2TI"/>
+                                    <constraint firstAttribute="height" constant="40" id="b6m-1R-foQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="player2RemoveOne:" destination="BYZ-38-t0r" eventType="touchDown" id="s7a-2B-PXQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vOT-hc-bP9" secondAttribute="trailing" constant="52" id="0sV-1v-s2u"/>
+                            <constraint firstItem="LSl-Fi-hdj" firstAttribute="leading" secondItem="hX8-B2-yls" secondAttribute="trailing" constant="9" id="1ob-vI-GGj"/>
+                            <constraint firstItem="9se-zM-jgd" firstAttribute="leading" secondItem="Z7n-C0-E4g" secondAttribute="trailing" constant="9" id="2lB-Nk-4vb"/>
+                            <constraint firstItem="Vkx-wu-ajI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="6Pd-f4-hJ6"/>
+                            <constraint firstItem="vOT-hc-bP9" firstAttribute="top" secondItem="H8e-Wr-JEp" secondAttribute="bottom" constant="8" symbolic="YES" id="9Xp-XA-09h"/>
+                            <constraint firstItem="9se-zM-jgd" firstAttribute="top" secondItem="LSl-Fi-hdj" secondAttribute="bottom" constant="15" id="AeD-Qy-tSV"/>
+                            <constraint firstItem="e0k-S3-Q51" firstAttribute="top" secondItem="p2x-dJ-vMn" secondAttribute="bottom" constant="8" symbolic="YES" id="CCP-v3-x6b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hkC-Yy-MiD" secondAttribute="bottom" constant="269" id="Eqd-xh-0gO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MSX-rG-9H9" secondAttribute="trailing" constant="55" id="GGF-RK-EQx"/>
+                            <constraint firstItem="vOT-hc-bP9" firstAttribute="leading" secondItem="NrM-V1-uYI" secondAttribute="trailing" constant="9" id="Jh0-48-evZ"/>
+                            <constraint firstItem="LSl-Fi-hdj" firstAttribute="top" secondItem="e0k-S3-Q51" secondAttribute="bottom" constant="8" symbolic="YES" id="MWU-cd-o2G"/>
+                            <constraint firstItem="hX8-B2-yls" firstAttribute="top" secondItem="e0k-S3-Q51" secondAttribute="bottom" constant="8" symbolic="YES" id="NbW-G0-TzZ"/>
+                            <constraint firstItem="zeE-VD-5TO" firstAttribute="top" secondItem="NrM-V1-uYI" secondAttribute="bottom" constant="15" id="P4I-fa-mKi"/>
+                            <constraint firstItem="Vkx-wu-ajI" firstAttribute="centerX" secondItem="hkC-Yy-MiD" secondAttribute="centerX" id="PxH-2R-Pl8"/>
+                            <constraint firstItem="Z7n-C0-E4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="Q3M-hi-kHn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BJm-Ft-LYd" secondAttribute="trailing" constant="52" id="RHu-7k-szY"/>
+                            <constraint firstItem="BJm-Ft-LYd" firstAttribute="top" secondItem="vOT-hc-bP9" secondAttribute="bottom" constant="15" id="SLh-uG-TIL"/>
+                            <constraint firstItem="e0k-S3-Q51" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="VeN-DR-gGe"/>
+                            <constraint firstItem="H8e-Wr-JEp" firstAttribute="top" secondItem="MSX-rG-9H9" secondAttribute="bottom" constant="8" symbolic="YES" id="YK6-gM-oeT"/>
+                            <constraint firstItem="p2x-dJ-vMn" firstAttribute="top" secondItem="Vkx-wu-ajI" secondAttribute="bottom" constant="8" symbolic="YES" id="cP8-aM-1LS"/>
+                            <constraint firstItem="hkC-Yy-MiD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="dpV-xb-bD4"/>
+                            <constraint firstItem="hX8-B2-yls" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="icL-tt-GAx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H8e-Wr-JEp" secondAttribute="trailing" constant="55" id="m89-9y-CRh"/>
+                            <constraint firstItem="BJm-Ft-LYd" firstAttribute="leading" secondItem="zeE-VD-5TO" secondAttribute="trailing" constant="9" id="pVS-xY-1eU"/>
+                            <constraint firstItem="p2x-dJ-vMn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="rAX-68-KjI"/>
+                            <constraint firstItem="Vkx-wu-ajI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="saR-IS-0B9"/>
+                            <constraint firstItem="MSX-rG-9H9" firstAttribute="top" secondItem="Vkx-wu-ajI" secondAttribute="bottom" constant="8" symbolic="YES" id="wk0-Vl-6EX"/>
+                            <constraint firstItem="NrM-V1-uYI" firstAttribute="top" secondItem="H8e-Wr-JEp" secondAttribute="bottom" constant="8" symbolic="YES" id="zHF-HE-GzB"/>
+                            <constraint firstItem="Z7n-C0-E4g" firstAttribute="top" secondItem="hX8-B2-yls" secondAttribute="bottom" constant="15" id="zr6-0T-mzw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameOverText" destination="hkC-Yy-MiD" id="Mww-d4-Pt6"/>
+                        <outlet property="player1LifeCount" destination="e0k-S3-Q51" id="y7J-JA-UJl"/>
+                        <outlet property="player2LifeCount" destination="H8e-Wr-JEp" id="QsF-uQ-45F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="49.618320610687022" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
