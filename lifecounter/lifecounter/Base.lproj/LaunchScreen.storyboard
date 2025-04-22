@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0E-yx-PcF">
-                                <rect key="frame" x="146" y="412" width="100" height="29"/>
+                                <rect key="frame" x="146.66666666666666" y="411.66666666666669" width="100" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="2if-2p-mSd"/>
                                     <constraint firstAttribute="width" constant="100" id="hGY-h9-1vC"/>
@@ -30,8 +30,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="A0E-yx-PcF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="353" id="NSo-cN-lPv"/>
-                            <constraint firstItem="A0E-yx-PcF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="bk1-kN-HJ1"/>
+                            <constraint firstItem="A0E-yx-PcF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="IpN-Hv-2CG"/>
+                            <constraint firstItem="A0E-yx-PcF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="a1T-KQ-a07"/>
                         </constraints>
                     </view>
                 </viewController>
