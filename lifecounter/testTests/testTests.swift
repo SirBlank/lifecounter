@@ -1,14 +1,14 @@
 //
-//  lifecounterTests.swift
-//  lifecounterTests
+//  testTests.swift
+//  testTests
 //
-//  Created by Amber Wu on 4/16/25.
+//  Created by Amber Wu on 4/22/25.
 //
 
 import XCTest
-@testable import lifecounter
+@testable import test
 
-final class lifecounterTests: XCTestCase {
+final class testTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

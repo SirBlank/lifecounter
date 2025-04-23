@@ -1,27 +1,36 @@
 //
 //  ViewController.swift
-//  lifecounter
+//  test
 //
-//  Created by Amber Wu on 4/16/25.
+//  Created by Amber Wu on 4/22/25.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    @IBOutlet weak var playersStackView: UIStackView!
+    @IBOutlet weak var firstRowStackView: UIStackView!
+    @IBOutlet weak var secondRowStackView: UIStackView!
     
     var playerViews = [PlayerView]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     
     func addPlayerView() {
         let playerView = PlayerView(frame: CGRect(x: 0, y: 0, width: 241.5, height: 380))
         
         playerView.nameLabel?.text = "Player \(playerViews.count + 1)"
-        playersStackView.addSubview(playerView)
+        if playerViews.count < 4 {
+            firstRowStackView.addArrangedSubview(playerView)
+        } else if playerViews.count < 8 {
+            secondRowStackView.addArrangedSubview(playerView)
+        } else {
+            return
+        }
+    
         playerViews.append(playerView)
     }
     
@@ -42,5 +51,6 @@ class ViewController: UIViewController {
     @IBAction func removePlayer(_ sender: Any) {
         removePlayerView()
     }
+
 }
 

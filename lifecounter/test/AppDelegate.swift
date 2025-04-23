@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  lifecounter
+//  test
 //
-//  Created by Amber Wu on 4/16/25.
+//  Created by Amber Wu on 4/22/25.
 //
 
 import UIKit
