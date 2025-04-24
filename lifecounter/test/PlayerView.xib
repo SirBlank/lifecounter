@@ -12,9 +12,11 @@
             <connections>
                 <outlet property="lifeLabel" destination="YZL-1T-AtE" id="yvj-Mx-IBE"/>
                 <outlet property="minusOneBtn" destination="XCj-5G-Q7p" id="an7-8Y-jKw"/>
+                <outlet property="minusValueBtn" destination="A2Y-PI-iag" id="lnU-Oc-uKj"/>
                 <outlet property="minusValueText" destination="A2Y-PI-iag" id="rSZ-I9-wkX"/>
-                <outlet property="nameLabel" destination="svq-Jk-mUc" id="D6j-Jq-LXL"/>
+                <outlet property="nameLabel" destination="svq-Jk-mUc" id="qmm-AM-gjw"/>
                 <outlet property="plusOneBtn" destination="ZjY-pU-W6T" id="ghk-3R-1ub"/>
+                <outlet property="plusValueBtn" destination="BHo-XU-TdT" id="Gs9-6c-O6M"/>
                 <outlet property="plusValueText" destination="BHo-XU-TdT" id="h48-0h-sgj"/>
                 <outlet property="valueText" destination="EhM-N4-v2p" id="caC-zk-dIp"/>
             </connections>
@@ -53,6 +55,9 @@
                             <color key="strokeColor" name="AccentColor"/>
                         </backgroundConfiguration>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="plusOne:" destination="-1" eventType="touchUpInside" id="yWr-SV-IXL"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCj-5G-Q7p">
                     <rect key="frame" x="117" y="146" width="54" height="34.5"/>
@@ -62,11 +67,17 @@
                             <color key="strokeColor" name="AccentColor"/>
                         </backgroundConfiguration>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="minusOne:" destination="-1" eventType="touchUpInside" id="Flg-Pv-uqs"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="add/remove life" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EhM-N4-v2p">
                     <rect key="frame" x="47" y="189" width="126" height="35"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <connections>
+                        <action selector="changeValue:" destination="-1" eventType="editingChanged" id="Zyy-zL-Ge6"/>
+                    </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHo-XU-TdT">
                     <rect key="frame" x="47" y="232" width="126" height="34.5"/>
@@ -79,6 +90,9 @@
                             <color key="strokeColor" name="AccentColor"/>
                         </backgroundConfiguration>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="addValue:" destination="-1" eventType="touchDown" id="hc5-2y-Fb8"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2Y-PI-iag">
                     <rect key="frame" x="47" y="274" width="126" height="34.5"/>
@@ -91,6 +105,9 @@
                             <color key="strokeColor" name="AccentColor"/>
                         </backgroundConfiguration>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="minusValue:" destination="-1" eventType="touchDown" id="Nth-nI-tqt"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

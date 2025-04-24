@@ -19,6 +19,8 @@
 		BF1BAE4F2DB89A4D0045F028 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1BAE4E2DB89A4D0045F028 /* PlayerView.swift */; };
 		BF1BAE512DB89A6C0045F028 /* PlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF1BAE502DB89A6C0045F028 /* PlayerView.xib */; };
 		BF1BAE532DB89B2F0045F028 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1BAE522DB89B2F0045F028 /* UIViewExtension.swift */; };
+		BF1BAE592DB8C3150045F028 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1BAE582DB8C3150045F028 /* HistoryViewController.swift */; };
+		BF1BAE5B2DB8C5280045F028 /* HistoryLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1BAE5A2DB8C5280045F028 /* HistoryLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		BF1BAE4E2DB89A4D0045F028 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		BF1BAE502DB89A6C0045F028 /* PlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerView.xib; sourceTree = "<group>"; };
 		BF1BAE522DB89B2F0045F028 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		BF1BAE582DB8C3150045F028 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		BF1BAE5A2DB8C5280045F028 /* HistoryLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryLog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				BF1BAE4E2DB89A4D0045F028 /* PlayerView.swift */,
 				BF1BAE502DB89A6C0045F028 /* PlayerView.xib */,
 				BF1BAE522DB89B2F0045F028 /* UIViewExtension.swift */,
+				BF1BAE582DB8C3150045F028 /* HistoryViewController.swift */,
+				BF1BAE5A2DB8C5280045F028 /* HistoryLog.swift */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -271,6 +277,8 @@
 				BF1BAE532DB89B2F0045F028 /* UIViewExtension.swift in Sources */,
 				BF1BAE232DB89A290045F028 /* ViewController.swift in Sources */,
 				BF1BAE1F2DB89A290045F028 /* AppDelegate.swift in Sources */,
+				BF1BAE592DB8C3150045F028 /* HistoryViewController.swift in Sources */,
+				BF1BAE5B2DB8C5280045F028 /* HistoryLog.swift in Sources */,
 				BF1BAE212DB89A290045F028 /* SceneDelegate.swift in Sources */,
 				BF1BAE4F2DB89A4D0045F028 /* PlayerView.swift in Sources */,
 			);

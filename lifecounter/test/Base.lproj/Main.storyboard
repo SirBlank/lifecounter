@@ -96,6 +96,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="6cP-nV-rPB" kind="presentation" id="gqI-od-gbH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player X LOSES!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZP-H0-sXb">
                                 <rect key="frame" x="379.5" y="1140" width="273" height="47"/>
@@ -137,6 +140,7 @@
                     </view>
                     <connections>
                         <outlet property="firstRowStackView" destination="0x4-mU-jrf" id="3Cd-bI-xnu"/>
+                        <outlet property="gameOverText" destination="iZP-H0-sXb" id="HuG-qG-gnR"/>
                         <outlet property="secondRowStackView" destination="ku1-W3-lyc" id="2uB-IB-zvU"/>
                     </connections>
                 </viewController>
@@ -144,8 +148,55 @@
             </objects>
             <point key="canvasLocation" x="93.604651162790702" y="-3.0523255813953485"/>
         </scene>
+        <!--History-->
+        <scene sceneID="O7A-me-t9u">
+            <objects>
+                <viewController title="History" id="6cP-nV-rPB" customClass="HistoryViewController" customModule="test" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="So7-XY-0uz">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NVg-Cw-VyY">
+                                <rect key="frame" x="102" y="122" width="500" height="751.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8Y-ci-tJZ">
+                                <rect key="frame" x="310" y="45" width="84" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="I2j-rA-HHR"/>
+                                    <constraint firstAttribute="height" constant="33" id="Yia-Ob-IrJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qeK-fz-70v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F8Y-ci-tJZ" firstAttribute="centerX" secondItem="So7-XY-0uz" secondAttribute="centerX" id="8af-jn-cci"/>
+                            <constraint firstItem="NVg-Cw-VyY" firstAttribute="top" secondItem="F8Y-ci-tJZ" secondAttribute="bottom" constant="44" id="FyV-2Y-Ema"/>
+                            <constraint firstItem="NVg-Cw-VyY" firstAttribute="centerY" secondItem="So7-XY-0uz" secondAttribute="centerY" id="K6k-LT-7Id"/>
+                            <constraint firstItem="NVg-Cw-VyY" firstAttribute="centerX" secondItem="So7-XY-0uz" secondAttribute="centerX" id="Maf-bF-SGR"/>
+                            <constraint firstItem="F8Y-ci-tJZ" firstAttribute="top" secondItem="qeK-fz-70v" secondAttribute="top" constant="45" id="bQJ-tj-gNR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="historyText" destination="NVg-Cw-VyY" id="3qD-cG-Hfx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xzl-eZ-4Tc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="808.7209302325582" y="-3.0523255813953485"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol PlayerViewDelegate: AnyObject {
+    func playerLost(_ playerView: PlayerView)
+}
+
 class PlayerView: UIView {
 
     @IBOutlet weak var nameLabel: UILabel!
@@ -19,6 +23,8 @@ class PlayerView: UIView {
     @IBOutlet weak var plusValueText: UIButton!
     @IBOutlet weak var minusValueText: UIButton!
     
+    weak var delegate: PlayerViewDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configureView()
@@ -28,6 +34,23 @@ class PlayerView: UIView {
         super.init(coder: coder)
         self.configureView()
     }
+    
+    var lifeCount: Int = 20 {
+        didSet {
+            let diff = lifeCount - oldValue
+            if diff > 0 {
+                HistoryLog.add("\(nameLabel.text ?? "Player)") gained \(diff) life.")
+            } else if diff < 0 {
+                HistoryLog.add("\(nameLabel?.text ?? "Player") lost \(-diff) life.")
+            }
+            lifeLabel?.text = "Life: \(lifeCount)"
+            if lifeCount <= 0 {
+                delegate?.playerLost(self)
+            }
+        }
+    }
+    
+    var lifeValue = 0
     
     private func configureView() {
         guard let view = self.loadViewFromNib(nibName: "PlayerView") else { return }
@@ -39,10 +62,16 @@ class PlayerView: UIView {
         self.nameLabel.text = name
     }
     
-    var lifeCount: Int = 20 {
-        didSet {
-            lifeLabel?.text = "Life: \(lifeCount)"
+    func updateButtonLabels() {
+        guard let value = Int(valueText.text ?? "") else {
+            plusValueBtn.setTitle("+", for: .normal)
+            minusValueBtn.setTitle("-", for: .normal)
+            return
         }
+        
+        lifeValue = value
+        plusValueBtn.setTitle("+\(value)", for: .normal)
+        minusValueBtn.setTitle("-\(value)", for: .normal)
     }
     
     @IBAction func plusOne(_ sender: Any) {
@@ -53,5 +82,16 @@ class PlayerView: UIView {
         lifeCount -= 1
     }
     
+    @IBAction func changeValue(_ sender: Any) {
+        updateButtonLabels()
+    }
 
+    @IBAction func addValue(_ sender: Any) {
+        lifeCount += lifeValue
+    }
+    
+    @IBAction func minusValue(_ sender: Any) {
+        lifeCount -= lifeValue
+    }
+    
 }
