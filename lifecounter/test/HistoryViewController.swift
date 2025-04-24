@@ -9,14 +9,17 @@ import UIKit
 
 class HistoryViewController: UIViewController {
     
-    @IBOutlet weak var historyText: UITextView!
+    @IBOutlet weak var historyText: UILabel!
     
     override func viewDidLoad() {
+        updateLog()
         super.viewDidLoad()
+    }
+    
+    func updateLog() {
+        historyText.numberOfLines = HistoryLog.numberOfLines()
         historyText.text = HistoryLog.allLogs().joined(separator: "\n")
-        print(HistoryLog.allLogs())
-        print(historyText.text ?? "nothing here")
-        print(historyText ?? "nothing here")
+        print(historyText.text ?? "Nothing here")
     }
     
     /*

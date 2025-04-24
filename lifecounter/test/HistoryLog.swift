@@ -11,8 +11,12 @@ class HistoryLog {
     private static var logs: [String] = []
     
     static func add(_ entry: String) {
-        print("Added entry!")
+        print("Entry added!")
         logs.append(entry)
+    }
+    
+    static func numberOfLines() -> Int {
+        return logs.count
     }
     
     static func allLogs() -> [String] {

@@ -23,7 +23,9 @@ class PlayerView: UIView {
     @IBOutlet weak var plusValueText: UIButton!
     @IBOutlet weak var minusValueText: UIButton!
     
-    weak var delegate: PlayerViewDelegate?
+    weak var viewDelegate: PlayerViewDelegate?
+    var lifeChanged = false
+    var isDead = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,13 +41,15 @@ class PlayerView: UIView {
         didSet {
             let diff = lifeCount - oldValue
             if diff > 0 {
-                HistoryLog.add("\(nameLabel.text ?? "Player)") gained \(diff) life.")
+                HistoryLog.add("\(nameLabel.text ?? "Player") gained \(diff) life.")
             } else if diff < 0 {
                 HistoryLog.add("\(nameLabel?.text ?? "Player") lost \(-diff) life.")
             }
             lifeLabel?.text = "Life: \(lifeCount)"
             if lifeCount <= 0 {
-                delegate?.playerLost(self)
+                isDead = true
+                HistoryLog.add("\(nameLabel.text ?? "Player") has been defeated!")
+                viewDelegate?.playerLost(self)
             }
         }
     }
@@ -75,11 +79,17 @@ class PlayerView: UIView {
     }
     
     @IBAction func plusOne(_ sender: Any) {
-        lifeCount += 1
+        if isDead == false {
+            lifeCount += 1
+            lifeChanged = true
+        }
     }
     
     @IBAction func minusOne(_ sender: Any) {
-        lifeCount -= 1
+        if isDead == false {
+            lifeCount -= 1
+            lifeChanged = true
+        }
     }
     
     @IBAction func changeValue(_ sender: Any) {
@@ -87,11 +97,17 @@ class PlayerView: UIView {
     }
 
     @IBAction func addValue(_ sender: Any) {
-        lifeCount += lifeValue
+        if isDead == false {
+            lifeCount += lifeValue
+            lifeChanged = true
+        }
     }
     
     @IBAction func minusValue(_ sender: Any) {
-        lifeCount -= lifeValue
+        if isDead == false {
+            lifeCount -= lifeValue
+            lifeChanged = true
+        }
     }
     
 }
